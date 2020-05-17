@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Ogrenci Arayuzu</title>
+</head>
+<body>
+<div align="center">
+    <h1>Ogrenci Arayuzu</h1>
+    <a href="new">Yeni Ogrenci Ekle</a>
+    <br/><br>
+    <table border="1">
+        <thead>
+            <tr>
+             <th>Id</th>
+             <th>Isim</th>
+             <th>Soyisim</th>
+             <th>Aktiviteler</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="sinif : ${idOgrenciAl} ">
+                <td th:text = "${sinif.id}">Id</td>
+                <td th:text = "${sinif.isim}">Isim</td>
+                <td th:text = "${sinif.soyisim}">Soyisim</td>
+                <td>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
